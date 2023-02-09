@@ -56,6 +56,7 @@ public class Database {
      */
     public Connection getConnection() throws SQLException {
         Connection connection = DriverManager.getConnection(url, user, password);
+        System.out.println(connection);
 
         if(!isInitialized && connection != null) {
             initializeDatabase(connection);
